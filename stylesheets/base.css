@@ -1,0 +1,104 @@
+/*
+* @description: css重设
+* @author: jason.wang
+*/
+body,div,dl,dt,dd,ul,ol,li,pre,h1,h2,h3,h4,h5,h6,input,textarea, select, button,form,fieldset,p,blockquote,th,td {
+    padding: 0;/*重置内填充和外填充，避免使用*通配符，浪费性能。*/
+    margin: 0;
+}
+header,section,aside,nav,figure,figcaption{
+    margin:0;
+    padding:0;
+    display:block;
+}
+/*设置默认字体*/
+body{
+    font-size:16px;
+    font-family: arial "华文细黑" \534E\6587\7EC6\9ED1 ;
+    background: #f0eff5;
+}
+/*重置输入表单的字体大小和字体样式,使之继承父类字体*/
+h1,h2,h3,h4,h5,h6,input,textarea, select, button{
+    font-size: 100%;
+    font-family:inherit;
+}
+input, label, select, option, textarea, button, fieldset,legend {
+    font-size:14px;
+    font-family: arial "华文细黑" \534E\6587\7EC6\9ED1;
+}
+/*在获取焦点时，去掉外面蓝框，主要针对input、链接类型*/
+:focus {
+    outline: 0;
+}
+/*去掉默认的点和序列号*/
+ul,ol,li{
+    list-style:none;
+}
+/*按钮的样式设置为手型*/
+button,submit {
+    cursor:pointer;
+}
+textarea {
+    resize:none;
+    outline:none;
+}
+address,cite,dfn,em,var,i{
+    font-style:normal;
+}
+strong{
+    font-weight:normal;
+}
+/*去掉默认边框和底部空白区*/
+img{
+    border:none;
+    vertical-align: top;
+}
+/*去掉表格边框之间的间距*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*遵循爱恨LVHA原则，设置链接和颜色和下划线*/
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration:none;
+}
+
+/****常用css样式*****/
+
+.clear{*zoom:1;}
+.clear:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow:hidden;
+    visibility: hidden;
+}
+.fl,.fc,.left{
+    float:left;
+}
+.fr,.right{
+    float:right;
+}
+.l,.c,.r{ float: left;}
+.r{ float: right;}
+
+
+input::-ms-clear{display:none;}
+input{
+    background:none;
+    outline:none;
+    border:none;
+}
+
+.clearfix{
+    clear:both;
+}
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+

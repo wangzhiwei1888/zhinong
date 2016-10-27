@@ -1,0 +1,10 @@
+
+.banner{ height: 90px; background: red; }
+.banner .left{ width: 20%; height: 80px; background: blue;}
+.banner .right{ width: 80%; height: 80px; background: yellow;}
+.banner .list{ text-align: right; }
+.banner .list .li{ display: inline-block; width: 100px; line-height: 80px; text-align: center; }
+
+.slides-pagination{ right: 10px; width: 20px; height: 80px; top: 50%; margin-top: -40px; }
+.slides-navigation a{ position: static; text-align: center;}
+.slides-navigation{ width: 20px; margin: auto; right: 10px; margin-top: 70px; }
