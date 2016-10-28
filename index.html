@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="stylesheets/base.css">
   <link rel="stylesheet" href="stylesheets/superslides.css">
   <link rel="stylesheet" href="stylesheets/style.css">
-
+  <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
   
 </head>
 <body>
@@ -50,6 +50,29 @@
     </nav>
   </div>
 
+  <div style="width:1px;height:2000px;"></div>
+    <div id="eq1" class="fadeInBox" style=" width:1000px; height:300px; background-color:Red;">
+      <span class="eq" style="font-size: 30px; position: absolute;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 100px;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 200px;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 300px;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 400px;">11111</span>
+
+      <img class="eq" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="">
+    </div>
+
+
+    <div id="eq2" class="fadeInBox" style=" width:1000px; height:800px; background-color:Red; margin-top: 90px;">
+      <span class="eq" style="font-size: 30px; position: absolute;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 100px;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 200px;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 300px;">11111</span>
+      <span class="eq" style="font-size: 30px; position: absolute; left: 400px;">11111</span>
+
+      <img class="eq" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="">
+    </div>
+    <div style="width:1px;height:2000px;"></div>
+
   <div class="banner" style="height: 120px; background: red;">hello</div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -60,6 +83,27 @@
     $('#slides').superslides({
       animation: 'fade'
     });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+            $(window).scroll(function () {
+              
+                $('.fadeInBox').each(function(){
+
+
+                  if($(this).offset().top >= $(window).scrollTop() && $(this).offset().top < ($(window).scrollTop()+$(window).height())){
+
+                    $(this).find('.eq').addClass('fadeInUp animated');
+                  }
+                  else{
+                    $(this).find('.eq').removeClass('fadeInUp animated');
+                  }
+
+                })
+
+            });
+        });
   </script>
 </body>
 </html>
