@@ -10,18 +10,21 @@ body{ font-family: 'Myriad Pro';  }
 
 
 
-.slides-pagination{ right: 10px; width: 20px; height: 80px; top: 50%; margin-top: -40px; }
+.slides-pagination{ right: 20px; width: 15px; height: 80px; top: 47%; margin-top: -40px; }
 .slides-navigation a{ position: static; text-align: center;}
-.slides-navigation{ width: 20px; margin: auto; right: 10px; margin-top: 70px; }
-
+.slides-navigation{ width: 20px; margin: auto; right: 17px; margin-top: 70px; top: 25%;}
+.slides-pagination a{ border:1px solid #62dd01; width: 8px; height: 8px; border-radius: 8px; margin: 10px 0;}
+.slides-pagination a.current{ background: none; width: 12px; height: 12px; border-radius: 12px; }
 .slides-container .font1{font-size: 36px; color: #fff; position: absolute; top: 37%; left: 50%; margin-left: -350px; width: 700px; text-align: center; border: 2px solid #fff;}
 .slides-container .font2{background: rgba(255,255,255,0.3); margin: 5px;}
 .slides-container .font3{position: absolute; width: 600px; top: 72%; left: 50%; margin-left: -300px; color: #fff; font-size: 26px; text-align: center; letter-spacing: 2px;font-family: 'Helvetica'}
 .slides-container .btn-login{position: absolute; width: 264px; height: 66px; line-height: 66px; color: #fff; text-align: center; font-size: 24px; background: #3eb460; border-radius: 9px; top: 85%; left: 50%; margin-left: -132px; font-family: 'Helvetica'}
 
 
+
+
 .commonA{ width: 1000px; height: 800px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonA .font1{ width: 830px; left: 50%; margin-left: -415px; position: absolute; top: 50px; }
+.commonA .font1{ width: 830px; left: 50%; margin-left: -415px; position: absolute; top: 50px; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; }
 .commonA .font2{ width: 317px; left: 50%; margin-left: -190px; position: absolute; top: 220px;}
 .commonA .font3{width: 317px; left: 50%; margin-left: -175px; position: absolute; top: 440px;}
 .commonA .phone1{position: absolute; bottom: -52px; left: 0; }
@@ -29,14 +32,14 @@ body{ font-family: 'Myriad Pro';  }
 
 
 .commonB{ width: 1000px; height: 800px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonB .font1{ width: 728px; left: 50%; margin-left: -364px; position: absolute; top: 66px; }
+.commonB .font1{ width: 728px; left: 50%; margin-left: -364px; position: absolute; top: 66px; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px;}
 .commonB .font2{ width: 317px; left: 100px; position: absolute; top: 300px;}
 .commonB .font3{width: 317px; left: 100px; position: absolute; top: 500px;}
 .commonB .phone1{position: absolute; bottom: -102px; right: 0; }
 
 
 .commonC{ width: 1000px; height: 800px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonC .font1{ width: 925px; left: 50%; margin-left: -463px; position: absolute; top: 66px; z-index: 10;}
+.commonC .font1{ width: 925px; left: 50%; margin-left: -463px; position: absolute; top: 66px; z-index: 10;text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px;}
 .commonC .font2{ width: 317px; left: 95px; position: absolute; top: 270px; z-index: 10;}
 .commonC .font3{width: 317px; left: 450px; position: absolute; top: 500px; z-index: 10;}
 .commonC .phone1{position: absolute; bottom: -52px; left: 0; }
@@ -44,9 +47,9 @@ body{ font-family: 'Myriad Pro';  }
 
 
 .commonD{ width: 1000px; height: 750px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonD .font1{ width: 660px; left: 50%; margin-left: -330px; position: absolute; top: 76px; z-index: 10;}
+.commonD .font1{ width: 660px; left: 50%; margin-left: -330px; position: absolute; top: 76px; z-index: 10; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; color: #fff;}
 .commonD .font2{ width: 317px; left: 5px; position: absolute; top: 190px; z-index: 10;}
-.commonD .font3{width: 948px; left: 50%; margin-left: -496px; position: absolute; top: 530px; z-index: 10;}
+.commonD .font3{width: 948px; left: 50%; margin-left: -496px; position: absolute; top: 525px; z-index: 10; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; color: #fff;}
 .commonD .font4{position: absolute; font-size: 20px; color: #fff; left: 350px; top: 215px; line-height: 34px; color: #eee;}
 .commonD-bg{ background: url(../images/bg.png); background-size: 100% 100%; }
 
@@ -124,3 +127,36 @@ body{ font-family: 'Myriad Pro';  }
 .art-box .tt{ font-size: 26px; line-height: 28px; }
 .art-box .con{ font-size: 16px; line-height: 28px; color: #5c5c5c; margin-top: 8px;}
 .art-box .tip{ font-size: 16px; line-height: 28px; color: #5c5c5c; margin-top: 20px;}
+
+
+
+
+
+.login-from-bg{ background: url(../images/bg2.png) 0 0 no-repeat; background-size: 100% 550px;  padding: 80px 0; }
+.form-box{}
+.login-from{  margin: 0 auto; height: 390px; width: 405px; border: 1px solid #c8c8c8; background: #fff; color: #999;}
+.login-from-c{ padding: 22px 22px; font-family: 'Helvetica'; }
+.login-from .tt{ font-size: 35px; font-weight: bold; color: #1e1e1e;}
+.login-from .reg-guide{ padding-top: 10px; }
+.login-from .reg-guide a{ font-size: 20px; color: #6ac382;}
+.login-from .reg-guide span{ vertical-align: middle; }
+
+.login-from .form-text{ border:1px solid #c2c2c2; border-radius: 5px; padding: 13px 20px; margin-top: 15px; }
+.login-from .txt{ display: inline-block;width: 70px; }
+.login-from .rember{ padding: 10px 0; }
+.login-from .rember .center{ padding-left: 10px; font-weight: normal; }
+.login-from .rember .right{ color: #3eb460; text-decoration: underline; }
+.btn{ background: #3eb460; border-radius: 3px; color: #fff; font-size: 16px; border: none; display: block; width: 100%; height: 46px; margin-top: 5px; font-style: normal; text-decoration: none;}
+.btn:hover{ color: #fff; }
+.errMsg{ color: red; margin-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
