@@ -1,10 +1,15 @@
 <template name="situationNew">
-  <div>
-    <h2>Crops Situation</h2>
+<div class="article-bg">
+  <div class="situationNew">
+
+    <div class="tt1">Crops Situation</div>
+
     {{#autoForm collection="situation"  id="asituationNewForm" type="insert"}}
       <fieldset>
-        {{> afQuickField name='cropName' placeholder="Eg. Paddy"}}
-        <span>Please at least upload 3 images</span>
+        <div class="cropName">
+          <div class="left">{{> afQuickField name='cropName' placeholder="Eg. Paddy"}}</div>
+          <div class="right">Please at least upload 3 images</div>
+        </div>
         <div class="form-group clearfix">
           <p><label for="exampleInputFile">leaves</label><span>upload</span></p>
           <p><label for="exampleInputFile">leaves</label><span>upload</span></p>
@@ -18,5 +23,6 @@
       </button>
     {{/autoForm}}
   </div>
+</div>
   <!-- {{> imgUploader}} -->
 </template>

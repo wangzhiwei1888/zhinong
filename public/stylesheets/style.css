@@ -162,3 +162,16 @@ body{ font-family: 'Myriad Pro';  }
 .reg-box .form-list .fr{ width: 48%; }
 
 .reg-box .btn-box{ padding-top: 20px; }
+
+
+.situationNew{ width: 1000px; margin: 0 auto; padding-bottom: 50px; padding-top: 45px; }
+.situationNew .tt1{ width: 350px; height: 48px; line-height: 48px; font-size: 32px; background: url(/images/bg4.png) 0 0 no-repeat; color: #fff; text-align: center; font-family: 'Helvetica'; font-weight: bold;}
+
+.situationNew .cropName{}
+.situationNew .cropName {}
+
+
+
+
+
+
