@@ -10,19 +10,136 @@
           <div class="left">{{> afQuickField name='cropName' placeholder="Eg. Paddy"}}</div>
           <div class="right">Please at least upload 3 images</div>
         </div>
-        <div class="form-group clearfix">
-          <p><label for="exampleInputFile">leaves</label><span>upload</span></p>
-          <p><label for="exampleInputFile">leaves</label><span>upload</span></p>
-          <p><label for="exampleInputFile">leaves</label><span>upload</span></p>
+        <div class="form-group clearfix img-upload">
+          <div class="add-li">
+            <label for="exampleInputFile">leaves</label>
+            <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile" onchange="javascript:setImagePreviews('picfile','dd');"/></span>
+            <div class="img-list" id="dd">
+              
+            </div>
+          </div>
+          <div class="add-li">
+            <label for="exampleInputFile">Flower</label>
+            <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile1" onchange="javascript:setImagePreviews('picfile1','dd1');"/></span>
+            <div class="img-list" id="dd1">
+              <!-- <span class="img-li"><img src="/images/img13.png" alt=""></span>
+              <span class="img-li"><img src="/images/img13.png" alt=""></span>
+              <span class="img-li"><img src="/images/img13.png" alt=""></span> -->
+            </div>
+          </div>
+          <div class="add-li">
+            <label for="exampleInputFile">Root</label>
+            <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile2" onchange="javascript:setImagePreviews('picfile2','dd2');"/></span>
+            <div class="img-list" id="dd2">
+              <!-- <span class="img-li"><img src="/images/img13.png" alt=""></span>
+              <span class="img-li"><img src="/images/img13.png" alt=""></span>
+              <span class="img-li"><img src="/images/img13.png" alt=""></span> -->
+            </div>
+          </div>
         </div>
         <!-- {{> afQuickField name='activityAdd'  placeholder="活动所在范围"}}
         {{> afQuickField name='activityDesc' rows=6  placeholder="字数不限"}} -->
       </fieldset>
-      <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
-        Next Step
-      </button>
+      <div class="btn-box">
+        <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
+          Next Step
+        </button>
+      </div>
     {{/autoForm}}
   </div>
 </div>
+
+<script type="text/javascript">
+  
+  function setImagePreviews(clickId,id) {
+
+    var num = Math.random();
+    var docObj = document.getElementById(clickId);
+
+    var dd = document.getElementById(id);
+
+    var fileList = docObj.files;
+
+    if(fileList.length !=3 ){
+        alert("选择3张图片！"); 
+        // for IE, Opera, Safari, Chrome
+        if(docObj.outerHTML){
+
+          docObj.outerHTML = docObj.outerHTML;
+        }
+        else{
+          // FF(包括3.5)
+          docObj.value = '';
+        }
+        return;
+    }
+    for (var i = 0; i < fileList.length; i++) {            
+
+        dd.innerHTML += '<span class="img-li"><img id="img'+num+i+'" /></span>'
+        
+        var imgObjPreview = document.getElementById("img"+num+i); 
+
+        if (docObj.files && docObj.files[i]) {
+
+            
+
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
+
+        }
+
+        else {
+
+            //IE下，使用滤镜
+
+            docObj.select();
+
+            var imgSrc = document.selection.createRange().text;
+
+            alert(imgSrc)
+
+            var localImagId = document.getElementById("img"+num + i);
+
+            //必须设置初始大小
+
+            // localImagId.style.width = "150px";
+
+            // localImagId.style.height = "150px";
+
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+
+            try {
+
+                localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+
+            }
+
+            catch (e) {
+
+                alert("您上传的图片格式不正确，请重新选择!");
+
+                return false;
+
+            }
+
+            imgObjPreview.style.display = 'none';
+
+            document.selection.empty();
+
+        }
+
+    }  
+
+
+
+    return true;
+
+  }
+
+
+</script>
   <!-- {{> imgUploader}} -->
 </template>

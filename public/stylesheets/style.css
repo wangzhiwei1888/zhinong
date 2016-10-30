@@ -166,11 +166,42 @@ body{ font-family: 'Myriad Pro';  }
 
 .situationNew{ width: 1000px; margin: 0 auto; padding-bottom: 50px; padding-top: 45px; }
 .situationNew .tt1{ width: 350px; height: 48px; line-height: 48px; font-size: 32px; background: url(/images/bg4.png) 0 0 no-repeat; color: #fff; text-align: center; font-family: 'Helvetica'; font-weight: bold;}
+.situationNew .cropName { padding-top: 30px; }
+.situationNew .help-block{ display: inline-block; }
 
-.situationNew .cropName{}
-.situationNew .cropName {}
+.cropName .form-group label { font-size: 20px; font-weight: normal; width: 130px;}
+.situationNew .cropName .right { font-size: 20px; }
+.cropName .form-group .form-control{ width: 300px; display: inline-block; }
+
+.situationNew .img-upload{}
+.situationNew .img-upload label{ width: 130px; font-size: 20px; font-weight: normal; vertical-align: middle;}
+.situationNew .add-img{ display: inline-block; width: 69px; height: 68px; background: url(/images/add.png) 0 0 no-repeat;  vertical-align: middle; overflow: hidden; cursor: pointer; position: relative;}
+
+.situationNew .add-li{ padding-top: 20px; }
+.situationNew .btn-box{ text-align: right; }
+.situationNew .btn-login{ display: inline-block; width: 130px; border-radius: 10px; outline: none; font-size: 20px;}
+.situationNew .btn-login:hover{ background: #3eb460; outline: none;}
+.situationNew .btn-login:focus,.situationNew .btn-login:active{background: #3eb460; color: #fff;outline: none;}
+
+.img-list{ display: inline-block; }
+.img-list .img-li{ width: 70px; height: 70px; margin-left: 60px;}
+.img-list img{ border-radius: 10px; width: 68px; height: 68px; border: 1px solid #a1ce98; }
 
 
+
+.summaryNew{ width: 1000px; margin: 0 auto; padding-bottom: 50px; padding-top: 45px; font-size: 20px;}
+.summaryNew .tt1{ width: 350px; height: 48px; line-height: 48px; font-size: 32px; background: url(/images/bg4.png) 0 0 no-repeat; color: #fff; text-align: center; font-family: 'Helvetica'; font-weight: bold;}
+
+.summaryNew .form-group label{ font-size: 18px;  font-weight: normal; padding: 10px 0; }
+.summaryNew .left{ width: 70%; }
+.summaryNew .right{ width: 15%; padding-top: 445px;}
+
+.summaryNew .btn-login{ display: inline-block; width: 130px; border-radius: 10px; outline: none; font-size: 20px;}
+.summaryNew .btn-login:hover{ background: #3eb460; outline: none;}
+.summaryNew .btn-login:focus,.situationNew .btn-login:active{background: #3eb460; color: #fff;outline: none;}
+
+
+.picfile{width: 100px; height: 100px; background: red; position: absolute; left: 0px; top: 0px; opacity: 0;}
 
 
 
