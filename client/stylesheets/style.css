@@ -51,7 +51,7 @@ body{ font-family: 'Myriad Pro';  }
 .commonD .font2{ width: 317px; left: 5px; position: absolute; top: 190px; z-index: 10;}
 .commonD .font3{width: 948px; left: 50%; margin-left: -496px; position: absolute; top: 525px; z-index: 10; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; color: #fff;}
 .commonD .font4{position: absolute; font-size: 20px; color: #fff; left: 350px; top: 215px; line-height: 34px; color: #eee;}
-.commonD-bg{ background: url(../images/bg.png); background-size: 100% 100%; }
+.commonD-bg{ background: url(//images/bg.png); background-size: 100% 100%; }
 
 .commonD .btn-login{position: absolute; width: 264px; height: 66px; line-height: 66px; color: #fff; text-align: center; font-size: 24px; background: #3eb460; border-radius: 9px; bottom:30px; left: 50%; margin-left: -132px; font-family: 'Helvetica'}
 
@@ -67,7 +67,7 @@ body{ font-family: 'Myriad Pro';  }
 
 
 
-.aboutA-bg{background: url(../images/bg1.png) center 0 no-repeat; }
+.aboutA-bg{background: url(//images/bg1.png) center 0 no-repeat; }
 
 .aboutA{ width: 1000px; margin: 0 auto; }
 .aboutA .tt{ padding-top: 35px; padding-bottom: 30px; text-align: center; font-size: 48px; font-weight: bold; }
@@ -112,7 +112,7 @@ body{ font-family: 'Myriad Pro';  }
 .aboutD .con .fl{ width: 390px; padding-left: 23px;}
 .aboutD .con .fl .img{width: 347px; }
 .aboutD .con .fc{ width: 50%; }
-.aboutD .img-box{ width: 622px; height: 516px; background: url(../images/img12.png) 0 0 no-repeat;  }
+.aboutD .img-box{ width: 622px; height: 516px; background: url(//images/img12.png) 0 0 no-repeat;  }
 .aboutD .img-box-c{ margin-left: 150px; padding-top: 188px; color: #fff; font-size: 20px; }
 .aboutD .img-box-cc{ line-height: 46px; }
 .aboutD .btn-box{ margin-left: 60px; margin-top: 20px; }
@@ -120,7 +120,7 @@ body{ font-family: 'Myriad Pro';  }
 
 
 
-.article-bg{background: url(../images/bg1.png) center 0 no-repeat; }
+.article-bg{background: url(//images/bg1.png) center 0 no-repeat; }
 
 .article{ width: 1000px; margin: 0 auto; padding-bottom: 50px; }
 .art-box{ padding-top: 30px; }
@@ -132,7 +132,7 @@ body{ font-family: 'Myriad Pro';  }
 
 
 
-.login-from-bg{ background: url(../images/bg2.png) 0 0 no-repeat; background-size: 100% 550px;  padding: 80px 0; }
+.login-from-bg{ background: url(//images/bg2.png) 0 0 no-repeat; background-size: 100% 550px;  padding: 80px 0; }
 .form-box{}
 .login-from{  margin: 0 auto; height: 390px; width: 405px; border: 1px solid #c8c8c8; background: #fff; color: #999;}
 .login-from-c{ padding: 22px 22px; font-family: 'Helvetica'; }
@@ -153,7 +153,7 @@ body{ font-family: 'Myriad Pro';  }
 
 .reg-box{ width: 1000px; margin: 0 auto; padding-bottom: 50px; text-align: center;}
 .reg-box .tt{ font-size: 25px; padding-top: 15px; padding-bottom: 20px; }
-.reg-box .tip{ background: url(../images/bg3.png) center 0 no-repeat; color: #999; padding-top: 25px; }
+.reg-box .tip{ background: url(//images/bg3.png) center 0 no-repeat; color: #999; padding-top: 25px; }
 
 .reg-box .reg-from { width: 465px; margin: 0 auto;  padding-top: 20px;}
 .reg-box .form-list { padding-top: 12px; }
@@ -161,5 +161,3 @@ body{ font-family: 'Myriad Pro';  }
 .reg-box .form-list .fr{ width: 48%; }
 
 .reg-box .btn-box{ padding-top: 20px; }
-
-
