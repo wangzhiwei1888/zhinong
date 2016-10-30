@@ -1,7 +1,7 @@
 Template.index.onRendered (function(){
   
   $('.footer-bg').css('background','none');
-  $('.banner-bg').css('background','none');
+  $('.banner-bg-c').css('background','#fff');
 
   
 
@@ -10,6 +10,6 @@ Template.index.onRendered (function(){
 Template.index.onDestroyed (function(){
   
   $('.footer-bg').css('background','#f2f2f2');
-  $('.banner-bg').css('background','#fdfdfd');
+  $('.banner-bg-c').css('background','#fdfdfd');
   
 });

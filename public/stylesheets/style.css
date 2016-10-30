@@ -1,6 +1,7 @@
 
 body{ font-family: 'Myriad Pro';  }
-.banner{ width: 1000px; margin: 0 auto; }
+.banner-bg-c{ position: fixed; top: 0; background: #fff; width: 100%; z-index: 1000;}
+.banner{ width: 1000px; margin: 0 auto;}
 .banner .left{ width: 20%; padding-top: 9px; padding-bottom: 7px;}
 .banner .right{ width: 80%; height: 80px;}
 .banner .list{ text-align: right; font-weight: bold; font-size: 16px;}
@@ -148,7 +149,7 @@ body{ font-family: 'Myriad Pro';  }
 .login-from .rember .right{ color: #3eb460; text-decoration: underline; }
 .btn{ background: #3eb460; border-radius: 3px; color: #fff; font-size: 16px; border: none; display: block; width: 100%; height: 46px; margin-top: 5px; font-style: normal; text-decoration: none;}
 .btn:hover{ color: #fff; }
-.errMsg{ color: red; margin-top:10px;}
+.errMsg{ color: red; margin-top:10px; text-align: left; display: none;}
 
 
 .reg-box{ width: 1000px; margin: 0 auto; padding-bottom: 50px; text-align: center;}

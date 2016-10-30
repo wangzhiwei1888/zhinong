@@ -9,49 +9,56 @@
 				<div class="form-list clear">
 					<div class="fl">
 						<input type="email" class="form-control" id='regEmail' placeholder="Email">
+						<div class="errMsg">Please enter a valid email </div>
 					</div>
 					<div class="fr">
 						<input type="password" class="form-control" id='regPassword' placeholder="Password">
+						<div class="errMsg">Your password must be at least 6 characters long</div>
 					</div>
 				</div>
 				<div class="form-list clear">
 					<div class="fl">
 						<input type="text" class="form-control" id='firstName' placeholder="First name">
+						<div class="errMsg">This field is required.</div>
 					</div>
 					<div class="fr">
 						<input type="text" class="form-control" id='lastName' placeholder="Last name">
+						<div class="errMsg">This field is required.</div>
 					</div>
 				</div>
 				<div class="form-list clear">
-					<select class="form-control">
-			          <option value="">Job Function</option>
-			          <option value="">Product</option>
-			          <option value="">Strategy</option>
-			          <option value="">Engineering</option>
-			          <option value="">Press</option>
-			          <option value="">Other</option>
+					<select class="form-control" value="Job Function" name="fun" id="fun">
+			          <option value="Job Function">Job Function</option>
+			          <option value="Product">Product</option>
+			          <option value="Strategy">Strategy</option>
+			          <option value="Engineering">Engineering</option>
+			          <option value="Press">Press</option>
+			          <option value="Other">Other</option>
 			        </select>
 				</div>
 
 				<div class="form-list clear">
-					<input type="text" class="form-control" id='companyName'  placeholder="Company Name">
+					<input type="text" class="form-control" name="companyName" id='companyName'  placeholder="Company Name">
+					<div class="errMsg">This field is required.</div>
 				</div>
 
 				<div class="form-list clear">
-					<input type="text" class="form-control" id='companyLicience'  placeholder="Company Licience No.">
+					<input type="text" class="form-control" name="companyLicience" id='companyLicience'  placeholder="Company Licience No.">
+					<div class="errMsg">This field is required.</div>
 				</div>
 
 				<div class="form-list clear">
 					<input type="text" class="form-control" id='localSalesAmount'  placeholder="Local sales amount">
+					<div class="errMsg">This field is required.</div>
 				</div>
 
-				<div class="form-list clear">
-					<select class="form-control">
-			          <option value="">Focus On</option>
-			          <option value="">Herbicide</option>
-			          <option value="">Insecticide</option>
-			          <option value="">Fungicide</option>
-			          <option value="">Other</option>
+				<div class="form-list clear" >
+					<select class="form-control" id="focus" value="Focus On" name="focus">
+			          <option value="Focus On">Focus On</option>
+			          <option value="Herbicide">Herbicide</option>
+			          <option value="Insecticide">Insecticide</option>
+			          <option value="Fungicide">Fungicide</option>
+			          <option value="Other">Other</option>
 			        </select>
 				</div>
 				<div class="btn-box">
