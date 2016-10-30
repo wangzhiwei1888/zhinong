@@ -1,7 +1,7 @@
 Router.configure({
   layoutTemplate: 'layout',
   // loadingTemplate: 'loading',
-  // notFoundTemplate: '404',
+  // notFoundTemplate: 'index',
   yieldTemplates: {
     'header': { to: 'header' },
     'footer': { to: 'footer' },
