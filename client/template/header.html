@@ -10,7 +10,8 @@
         <li class="li"><a href="{{pathFor 'about'}}">About</a></li>
         <li class="li"><a href="#">Date</a></li>
         <li class="li"><a href="{{pathFor 'reg'}}">Sign up</a></li>
-        <li class="li"><a href="{{pathFor 'login'}}">Login</a></li>
+        <li class="li">{{#unless currentUser}}<a href="{{pathFor 'login'}}">Login</a>{{else}}
+          <a class="logOut" href="">LogOut</a>{{/unless}}</li>
       </ul>
     </div>
   </div>

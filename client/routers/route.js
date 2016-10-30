@@ -36,6 +36,13 @@ Router.map(function() {
   this.route('login', {
     path: '/login',
     template: 'login',
+    // onBeforeAction: function() {
+    //   if (Meteor.userId()) {
+    //     this.render('index');
+    //   } else {
+    //     this.next();
+    //   }
+    // },
     yieldTemplates: {
       'header': { to: 'header' },
       'footer': { to: 'footer' },
