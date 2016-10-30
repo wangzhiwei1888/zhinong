@@ -8,5 +8,13 @@ Router.map(function() {
       'footer': { to: 'footer' },
     }
   });
+  this.route('summarynew', {
+    path: '/summarynew',
+    template: 'summaryNew',
+    yieldTemplates: {
+      'header': { to: 'header' },
+      'footer': { to: 'footer' },
+    }
+  });
 
 });
