@@ -1,12 +1,6 @@
 
 Template.reg.events({
   "click #regBtn": function(event, template){
-    var hashid = window.location.hash;
-    var hash = window.location.search;
-    console.log('hashid', hashid);
-    var route = hash.substring(1);
-    console.log('route', route);
-    var route = query.substring(1);
     $('.form-control').each(function(){
 
       if($.trim($(this).val()) == ''){
@@ -83,12 +77,20 @@ Template.reg.events({
         $('#btn').on('click',function(){
 
           layer.close(tip);
-          if (hash) {
-            console.log('aa');
-            Router.go(route,  {_id: 1}, {hash: hashid});
-          }else {
-            console.log('bb');
-            Router.go("/");
+          var hashid = window.location.hash;
+          if (hashid) {
+            var hash = window.location.search;
+            console.log('hashid', hashid);
+            var route = hash.substring(1);
+            console.log('route', route);
+            var route = query.substring(1);
+            if (hash) {
+              console.log('aa');
+              Router.go(route,  {_id: 1}, {hash: hashid});
+            }else {
+              console.log('bb');
+              Router.go("/");
+            }
           }
 
         })
