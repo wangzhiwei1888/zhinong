@@ -42,7 +42,7 @@
         </div>
         <div class="font3">AgriSharable delivers data and insights <br/>
         to succeed in the agrochemicals business.</div>
-        <a class="btn-login" href="" >Sign Up, It's Free!</a>
+        <a class="btn-login" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
       </div>
     </div>
     <nav class="slides-navigation">
@@ -70,16 +70,16 @@
       <div class="phone1"><img src="/images/phone3.png" alt=""></div>
     </div>
   </div>
-  <div class="common">
+  <div class="common" id="common">
     <div class="commonC">
       <div class="font1">Smarter solution provided in an efficient, <br/>
           expedient and economical way.</div>
       <div class="font2"><img src="/images/font8.png" alt=""></div>
       <div class="font3"><img src="/images/font9.png" alt=""></div>
-      <div class="phone1"><a href="{{pathFor 'reg'}}"><img src="/images/phone4.png" alt=""></a></div>
+      <div class="phone1"><a href="{{pathFor 'login' query='index' hash='common'}}"><img src="/images/phone4.png" alt=""></a></div>
     </div>
   </div>
-  <div class="common commonD-bg">
+  <div class="common commonD-bg" id="commonbg">
     <div class="commonD">
       <div class="font1">The future of crop protection</div>
       <div class="font2"><img src="/images/font11.png" alt=""></div>
@@ -91,7 +91,7 @@
         No! The root of problems is we never use right tools to record and<br/>
         analysis how to use the agrochemicals with correct method.
       </div>
-      <a class="btn-login" href="{{pathFor 'reg'}}" >Create Together!</a>
+      <a class="btn-login" href="{{pathFor 'login' query='index' hash='commonbg'}}" >Create Together!</a>
     </div>
   </div>
 

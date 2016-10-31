@@ -1,10 +1,12 @@
 
 Template.reg.events({
   "click #regBtn": function(event, template){
-
-    var hash = window.location.hash;
-    console.log('hash', hash);
-
+    var hashid = window.location.hash;
+    var hash = window.location.search;
+    console.log('hashid', hashid);
+    var route = hash.substring(1);
+    console.log('route', route);
+    var route = query.substring(1);
     $('.form-control').each(function(){
 
       if($.trim($(this).val()) == ''){
@@ -81,9 +83,9 @@ Template.reg.events({
         $('#btn').on('click',function(){
 
           layer.close(tip);
-          if (hash == "#about") {
+          if (hash) {
             console.log('aa');
-            Router.go("about", {hash: 'abouthash1'});
+            Router.go(route,  {_id: 1}, {hash: hashid});
           }else {
             console.log('bb');
             Router.go("/");
