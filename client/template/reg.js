@@ -2,7 +2,8 @@
 Template.reg.events({
   "click #regBtn": function(event, template){
 
-
+    var hash = window.location.hash;
+    console.log('hash', hash);
 
     $('.form-control').each(function(){
 
@@ -21,11 +22,11 @@ Template.reg.events({
     var emailReg = "\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
 
     if($.trim($('#regEmail').val()).match(emailReg)){
-      
+
       $('#regEmail').parent().find('.errMsg').hide();
     }
     else{
-      
+
       $('#regEmail').parent().find('.errMsg').show();
 
     }
@@ -80,7 +81,14 @@ Template.reg.events({
         $('#btn').on('click',function(){
 
           layer.close(tip);
-          Router.go("/");
+          if (hash == "#about") {
+            console.log('aa');
+            Router.go("about");
+          }else {
+            console.log('bb');
+            Router.go("/");
+          }
+
         })
 
        }

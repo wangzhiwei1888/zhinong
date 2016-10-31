@@ -1,5 +1,7 @@
 Template.login.events({
   "click #loginBtn": function(event, template){
+    // var hash = window.location.hash;
+    // console.log('hash', hash);
     var user = $("input[name='email']").val();
     var password = $("input[name='password']").val();
      Meteor.loginWithPassword(user, password, function (error, result) {
@@ -21,6 +23,13 @@ Template.login.events({
    			$('#btn').on('click',function(){
 
    				layer.close(tip);
+          // if (hash == "#about") {
+          //   console.log('aa');
+          //   Router.go("about", hash='DOUDOU');
+          // }else {
+          //   console.log('bb');
+          //   Router.go("/");
+          // }
           Router.go("/");
    			})
 
