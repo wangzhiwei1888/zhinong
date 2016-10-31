@@ -47,35 +47,48 @@ Router.map(function() {
       'header': { to: 'header' },
       'footer': { to: 'footer' },
     }
-  });this.route('privacy', {
+  });
+  this.route('privacy', {
     path: '/privacy',
     template: 'privacy',
     yieldTemplates: {
       'header': { to: 'header' },
       'footer': { to: 'footer' },
     }
-  });this.route('reg', {
+  });
+  this.route('reg', {
     path: '/reg',
     template: 'reg',
+    onBeforeAction: function() {
+      if (Meteor.userId()) {
+        // this.render('index');
+        Router.go("/");
+      } else {
+        this.next();
+      }
+    },
     yieldTemplates: {
       'header': { to: 'header' },
       'footer': { to: 'footer' },
     }
-  });this.route('reset', {
+  });
+  this.route('reset', {
     path: '/reset',
     template: 'reset',
     yieldTemplates: {
       'header': { to: 'header' },
       'footer': { to: 'footer' },
     }
-  });this.route('test', {
+  });
+  this.route('test', {
     path: '/test',
     template: 'test',
     yieldTemplates: {
       'header': { to: 'header' },
       'footer': { to: 'footer' },
     }
-  });this.route('test1', {
+  });
+  this.route('test1', {
     path: '/test1',
     template: 'test1',
     yieldTemplates: {
