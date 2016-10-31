@@ -83,7 +83,7 @@ Template.reg.events({
           layer.close(tip);
           if (hash == "#about") {
             console.log('aa');
-            Router.go("about");
+            Router.go("about", {hash: 'abouthash1'});
           }else {
             console.log('bb');
             Router.go("/");
