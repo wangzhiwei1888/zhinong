@@ -1,12 +1,12 @@
-Template.situationNew.onRendered(function () {
+Template.solutionNew.onRendered(function () {
 
 });
 
-Template.situationNew.helpers({
+Template.solutionNew.helpers({
 
 });
 
-Template.situationNew.events({
+Template.solutionNew.events({
   "click #uploadActImg": function (event, template) {
     $('#myFileInput').trigger('click');
   }
@@ -14,7 +14,7 @@ Template.situationNew.events({
 
 
 AutoForm.hooks({
-  'asituationNewForm': {
+  'solutionNewForm': {
     before: {
       insert: function(doc) {
         // console.log(this);
@@ -26,7 +26,7 @@ AutoForm.hooks({
     onSuccess: function (operation, result, template) {
       // console.log(this);
       console.log("343", result);
-       Router.go('/pestnew',{_id:result});
+       Router.go('/summarynew',{_id:result});
     },
     onError: function(operation, error, template) {
       alert(error);

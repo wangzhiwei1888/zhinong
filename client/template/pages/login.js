@@ -35,7 +35,7 @@ Template.login.events({
               Router.go("/");
             }
           }
-          // Router.go("/");
+          Router.go("/");
    			})
 
        }

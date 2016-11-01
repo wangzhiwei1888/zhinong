@@ -92,6 +92,7 @@ Template.reg.events({
               Router.go("/");
             }
           }
+          Router.go("/");
 
         })
 

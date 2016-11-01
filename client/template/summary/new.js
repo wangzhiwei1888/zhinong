@@ -1,6 +1,6 @@
 
 AutoForm.hooks({
-  'asituationNewForm': {
+  'summaryNewForm': {
     before: {
       insert: function(doc) {
         doc.createdAt = new Date();
