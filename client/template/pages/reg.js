@@ -40,22 +40,20 @@ Template.reg.events({
       return ;
     }
 
-    var profile = {};
-
-    profile.firstName = $('#firstName').val();
-    profile.lastName = $('#lastName').val();
-    profile.fun = $('#fun').val();
-    profile.companyName = $('#companyName').val();
-    profile.companyLicience = $('#companyLicience').val();
-    profile.localSalesAmount = $('#localSalesAmount').val();
-    profile.focus = $('#focus').val();
-
-    console.log(profile);
-
     var options = new Object();
+    options.profile={};
+    options.profile.firstName = $('#firstName').val();
+    options.profile.lastName = $('#lastName').val();
+    options.profile.fun = $('#fun').val();
+    options.profile.companyName = $('#companyName').val();
+    options.profile.companyLicience = $('#companyLicience').val();
+    options.profile.localSalesAmount = $('#localSalesAmount').val();
+    options.profile.focus = $('#focus').val();
+
+
     options.email=document.getElementById("regEmail").value;
     options.password=document.getElementById("regPassword").value;
-    console.log('op', options);
+    console.log('options is', options);
     console.log('email', options.email);
     console.log('pwd', options.password);
     Accounts.createUser(options, function(error, result){
