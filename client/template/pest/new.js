@@ -1,5 +1,5 @@
 Template.pestNew.onRendered(function () {
-
+  // console.log('cropid', Session.get("cropid"));
 });
 
 Template.pestNew.helpers({
@@ -17,16 +17,17 @@ AutoForm.hooks({
   'pestNewForm': {
     before: {
       insert: function(doc) {
-        // console.log(this);
-        // console.log("doc==>",doc);
+        doc.situationId = window.localStorage.getItem("situationId");
         doc.createdAt = new Date();
+        console.log('doc', doc);
         return doc;
       }
     },
     onSuccess: function (operation, result, template) {
       // console.log(this);
-      console.log("343", result);
-       Router.go('solutionnew',{_id:result});
+      console.log("pestId", result);
+      window.localStorage.setItem("pestId", result);
+      Router.go('solutionnew');
     },
     onError: function(operation, error, template) {
       alert(error);

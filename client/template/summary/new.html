@@ -1,31 +1,27 @@
 <template name="summaryNew">
-<div class="article-bg">
-  <div class="summaryNew">
-    <div class="tt1">Summary</div>
-    {{#autoForm collection="summary"  id="summaryNewForm" type="insert"}}
-      <div class="clear">
-        <div class="left">
-          <fieldset>
-            {{> afQuickField name='failing' placeholder="Eg. Glyphosate and Paraquat..."}}
-            {{> afQuickField name='growing' placeholder="Eg. Glyphosate and Paraquat..."}}
-            {{> afQuickField name='reason' placeholder="Eg. Because Paraquat is banned in some city"}}
-          </fieldset>    
-        </div>
-        <div class="right">
-           
-        </div>
-      </div>
+  <div class="article-bg">
+    <div class="summaryNew">
+      <div class="tt1">Summary</div>
+      {{#autoForm collection="summary"  id="summaryNewForm" type="insert"}}
+        <div class="clear">
+          <div class="left">
+            <fieldset>
+              {{> afQuickField name='failing' placeholder="Eg. Glyphosate and Paraquat..."}}
+              {{> afQuickField name='growing' placeholder="Eg. Glyphosate and Paraquat..."}}
+              {{> afQuickField name='reason' placeholder="Eg. Because Paraquat is banned in some city"}}
+            </fieldset>
+          </div>
+          <div class="right">
 
-      <div class="btn-box">
-        <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
-            Submit
-        </button>
-      </div>
-      
-      
-    {{/autoForm}}
+          </div>
+        </div>
+
+        <div class="btn-box">
+          <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
+              Submit
+          </button>
+        </div>
+      {{/autoForm}}
+    </div>
   </div>
-
-</div>
-  <!-- {{> imgUploader}} -->
 </template>
