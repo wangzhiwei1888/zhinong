@@ -25,8 +25,8 @@ Router.map(function() {
     }
   });
   this.route('pestnew', {
-    // path: '/pestnew/:_id',
     path: '/pestnew',
+    // path: '/pestnew/:cropid',
     template: 'pestNew',
     yieldTemplates: {
       'header': { to: 'header' },

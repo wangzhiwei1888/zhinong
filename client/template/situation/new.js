@@ -25,8 +25,10 @@ AutoForm.hooks({
     },
     onSuccess: function (operation, result, template) {
       // console.log(this);
-      console.log("343", result);
-       Router.go('/pestnew',{_id:result});
+      console.log("situationId", result);
+      // Session.set("cropid", result);
+      window.localStorage.setItem("situationId", result);
+       Router.go('/pestnew');
     },
     onError: function(operation, error, template) {
       alert(error);
