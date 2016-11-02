@@ -1,14 +1,14 @@
 <template name="solutionNew">
 <div class="article-bg">
-  <div class="situationNew">
+  <div class="solution">
 
     <div class="tt1">Local Solutions</div>
 
     {{#autoForm collection="solution"  id="solutionNewForm" type="insert"}}
       <fieldset>
-        <div class="cropName">
-          <div class="" style="text-align: center;">Beat Solutions from Agrochemicals Company</div>
-          <div id="name" style="display: -webkit-inline-box;">
+        <div class="cropName solution-c">
+          <div class="" style="text-align: center; font-size: 32px;">Beat Solutions from Agrochemicals Company</div>
+          <div id="name" class="pub-box" style="display: -webkit-inline-box;">
             <div style="width: 50%;">
               {{> afQuickField name="solution1"}}
             </div>
@@ -16,8 +16,8 @@
               {{> afQuickField name="solution2"}}
             </div>
           </div>
-          <div class=""  style="text-align: center;">Beat Solutions from Agrochemicals Farmers</div>
-          <div id="name" style="display: -webkit-inline-box;">
+          <div class=""  style="text-align: center; font-size: 32px; padding-top: 30px; padding-bottom: 50px;">Beat Solutions from Agrochemicals Farmers</div>
+          <div id="name2" class="pub-box" style="display: -webkit-inline-box;">
             <div style="width: 50%;">
               {{> afQuickField name="solution3"}}
             </div>

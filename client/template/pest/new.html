@@ -1,52 +1,145 @@
 <template name="pestNew">
 <div class="article-bg">
-  <div class="situationNew">
+  <div class="pestNew">
 
-    <div class="tt1">The Worse Pest Description</div>
+  <div class="tt1">The Worse Pest Description</div>
+  
+  <div class="clear pestNew-top">
+    
+    <div class="left">
+      <span class="my-label">Pest type</span>
+      <select class="form-control" value="0" id="selectChange">
+        <option value="0">default</option>
+        <option value="1">Weeds</option>
+        <option value="2">Insects</option>
+        <option value="3">Desease</option>
+      </select>
+    </div>
+    <div class="right">
+      <span class="my-label">Pest Name</span>
+      <input type="text" class="form-control" placeholder="Eg. Paddy">
+    </div>
+  </div>
+  
+  <div class="pestNew-content">
+    <div class="tip">Please at least upload 3 images</div>
 
-    {{#autoForm collection="pest"  id="pestNewForm" type="insert"}}
-      <fieldset>
-        <div class="cropName">
-          {{> afQuickField name='pestType' options="allowed" firstOption="选择类型"}}
-          <div class="left">{{> afQuickField name='pestName' placeholder="Eg. Paddy"}}</div>
-          <br><br>
-          <div class="right">Please at least upload 3 images</div>
-          {{> afQuickField name="Leavrs"}}
-          {{> afQuickField name="Flowers"}}
-          {{> afQuickField name="Root"}}
-          {{> afQuickField name="Insects"}}
-          {{> afQuickField name="Eggs"}}
-          {{> afQuickField name="Desease"}}
+    <div class="form-group-box">
+      <div class="form-group clearfix img-upload" style="display: block;">
+        <div class="add-li">
+          <label for="exampleInputFile">leaves</label>
+          <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile" onchange="javascript:setImagePreviews('picfile','dd');"/></span>
+          <div class="img-list" id="dd">
+
+          </div>
         </div>
-        <!-- <div class="form-group clearfix img-upload">
-          <div class="add-li">
-            <label for="exampleInputFile">leaves</label>
-            <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile" onchange="javascript:setImagePreviews('picfile','dd');"/></span>
-            <div class="img-list" id="dd">
-
-            </div>
+        <div class="add-li">
+          <label for="exampleInputFile">Flower</label>
+          <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile1" onchange="javascript:setImagePreviews('picfile1','dd1');"/></span>
+          <div class="img-list" id="dd1">
+            <!-- <span class="img-li"><img src="/images/img13.png" alt=""></span>
+            <span class="img-li"><img src="/images/img13.png" alt=""></span>
+            <span class="img-li"><img src="/images/img13.png" alt=""></span> -->
           </div>
-          <div class="add-li">
-            <label for="exampleInputFile">Flower</label>
-            <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile1" onchange="javascript:setImagePreviews('picfile1','dd1');"/></span>
-            <div class="img-list" id="dd1">
-            </div>
+        </div>
+        <div class="add-li">
+          <label for="exampleInputFile">Root</label>
+          <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile2" onchange="javascript:setImagePreviews('picfile2','dd2');"/></span>
+          <div class="img-list" id="dd2">
+            <!-- <span class="img-li"><img src="/images/img13.png" alt=""></span>
+            <span class="img-li"><img src="/images/img13.png" alt=""></span>
+            <span class="img-li"><img src="/images/img13.png" alt=""></span> -->
           </div>
-          <div class="add-li">
-            <label for="exampleInputFile">Root</label>
-            <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile2" onchange="javascript:setImagePreviews('picfile2','dd2');"/></span>
-            <div class="img-list" id="dd2">
-            </div>
-          </div>
-        </div> -->
-
-      </fieldset>
-      <div class="btn-box">
-        <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
-          Next Step
-        </button>
+        </div>
       </div>
-    {{/autoForm}}
+
+      <div class="form-group clearfix img-upload">
+        <div class="add-li">
+          <label for="exampleInputFile">Insect</label>
+          <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile3" onchange="javascript:setImagePreviews('picfile3','dd3');"/></span>
+          <div class="img-list" id="dd3">
+
+          </div>
+        </div>
+        <div class="add-li">
+          <label for="exampleInputFile">Eggs</label>
+          <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile4" onchange="javascript:setImagePreviews('picfile4','dd4');"/></span>
+          <div class="img-list" id="dd4">
+            <!-- <span class="img-li"><img src="/images/img13.png" alt=""></span>
+            <span class="img-li"><img src="/images/img13.png" alt=""></span>
+            <span class="img-li"><img src="/images/img13.png" alt=""></span> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group clearfix img-upload">
+        <div class="add-li">
+          <label for="exampleInputFile">Desease</label>
+          <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile5" onchange="javascript:setImagePreviews('picfile5','dd5');"/></span>
+          <div class="img-list" id="dd5">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="btn-box">
+    <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
+      Next Step
+    </button>
+  </div>
+  <!-- 
+      {{#autoForm collection="pest"  id="pestNewForm" type="insert"}}
+        <fieldset>
+          <div class="cropName">
+            {{> afQuickField name='pestType' options="allowed" firstOption="选择类型"}}
+            <div class="left">{{> afQuickField name='pestName' placeholder="Eg. Paddy"}}</div>
+            <br><br>
+            <div class="right">Please at least upload 3 images</div>
+            {{> afQuickField name="Leavrs"}}
+            {{> afQuickField name="Flowers"}}
+            {{> afQuickField name="Root"}}
+            {{> afQuickField name="Insects"}}
+            {{> afQuickField name="Eggs"}}
+            {{> afQuickField name="Desease"}}
+          </div>
+          <div class="form-group clearfix img-upload">
+            <div class="add-li">
+              <label for="exampleInputFile">leaves</label>
+              <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile" onchange="javascript:setImagePreviews('picfile','dd');"/></span>
+              <div class="img-list" id="dd">
+
+              </div>
+            </div>
+            <div class="add-li">
+              <label for="exampleInputFile">Flower</label>
+              <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile1" onchange="javascript:setImagePreviews('picfile1','dd1');"/></span>
+              <div class="img-list" id="dd1">
+              </div>
+            </div>
+            <div class="add-li">
+              <label for="exampleInputFile">Root</label>
+              <span class="add-img"><input type="file" name="picfile" multiple class="picfile" id="picfile2" onchange="javascript:setImagePreviews('picfile2','dd2');"/></span>
+              <div class="img-list" id="dd2">
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+        <div class="btn-box">
+          <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
+            Next Step
+          </button>
+        </div>
+      {{/autoForm}}
+
+  -->
+
   </div>
 </div>
 
@@ -61,8 +154,8 @@
 
     var fileList = docObj.files;
 
-    if(fileList.length !=3 ){
-        alert("选择3张图片！");
+    if(fileList.length <3 ){
+        alert("Please at least upload 3 images");
         // for IE, Opera, Safari, Chrome
         if(docObj.outerHTML){
 
@@ -140,6 +233,24 @@
 
   }
 
+
+  $('#selectChange').on('change',function(){
+
+    var index = $(this).val();
+    // console.log($(this).val());
+    if(index == 0){
+      $('.form-group-box').find('.img-upload').hide();
+    }
+    else{
+      
+      $('.form-group-box').find('.img-upload').hide();
+      $('.form-group-box').find('.img-upload').eq(parseInt(index)-1).show();  
+
+    }
+    
+
+  })
+  $('#selectChange').trigger('change');
 
 </script>
   <!-- {{> imgUploader}} -->

@@ -60,8 +60,8 @@
 
     var fileList = docObj.files;
 
-    if(fileList.length !=3 ){
-        alert("选择3张图片！");
+    if(fileList.length <3 ){
+        alert("Please at least upload 3 images");
         // for IE, Opera, Safari, Chrome
         if(docObj.outerHTML){
 
