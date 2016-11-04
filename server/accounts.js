@@ -21,38 +21,6 @@ Accounts.onCreateUser(function(options, user) {
   return user;
 });
 
-Accounts.registerLoginHandler(function(loginRequest) {
-
-  // loginRequest 包含当前这个要使用微信登录的这个用户的信息。nickname、openid
-  // console.log("**********************registerLoginHandler loginRequest :", loginRequest);
-
-  var openid = loginRequest.username;
-  // console.log('+++++++++++++++++++++==registerLoginHandler openid is ', openid);
-  if(!openid) {
-    return undefined;
-  }
-
-  // console.log('**********************return undefined already');
-
-  //we create a admin user if not exists, and get the userId
-  var userId = null;
-  var user = Meteor.users.findOne({username: openid});
-
-  // console.log('**********************user is ', user);
-  if(!user) {
-    // console.log('**********************no user loginRequest is ', loginRequest);
-    userId = Meteor.users.insert(loginRequest);
-    // console.log('**********************userId is ', userId);
-  } else {
-    userId = user._id;
-  }
-
-  //send loggedin user's user id
-  return {
-    userId: userId
-  };
-});
-
 Accounts.onLogin(function(user){
   console.log('--- onLogin ---');
   // console.log('server use is', user);

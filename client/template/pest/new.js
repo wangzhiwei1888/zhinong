@@ -7,8 +7,9 @@ Template.pestNew.helpers({
 });
 
 Template.pestNew.events({
-  "click #uploadActImg": function (event, template) {
-    $('#myFileInput').trigger('click');
+  "click #cerateorgann": function (event, template) {
+    window.localStorage.setItem("pestId", "dsafsdfdsf");
+    Router.go('solutionnew', {_id: 1}, {query: 'q=s', hash: 'hashFrag'});
   }
 });
 

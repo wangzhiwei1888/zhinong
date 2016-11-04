@@ -7,9 +7,7 @@ Template.situationNew.helpers({
 });
 
 Template.situationNew.events({
-  "click #uploadActImg": function (event, template) {
-    $('#myFileInput').trigger('click');
-  }
+
 });
 
 

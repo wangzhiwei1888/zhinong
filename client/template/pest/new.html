@@ -3,9 +3,9 @@
   <div class="pestNew">
 
   <div class="tt1">The Worse Pest Description</div>
-  
+
   <div class="clear pestNew-top">
-    
+
     <div class="left">
       <span class="my-label">Pest type</span>
       <select class="form-control" value="0" id="selectChange">
@@ -20,7 +20,7 @@
       <input type="text" class="form-control" placeholder="Eg. Paddy">
     </div>
   </div>
-  
+
   <div class="pestNew-content">
     <div class="tip">Please at least upload 3 images</div>
 
@@ -93,7 +93,7 @@
       Next Step
     </button>
   </div>
-  <!-- 
+  <!--
       {{#autoForm collection="pest"  id="pestNewForm" type="insert"}}
         <fieldset>
           <div class="cropName">
@@ -148,21 +148,23 @@
   function setImagePreviews(clickId,id) {
 
     var num = Math.random();
+    console.log('num', num);
     var docObj = document.getElementById(clickId);
-
+    console.log('docObj', docObj);
     var dd = document.getElementById(id);
-
+    console.log('dd', dd);
     var fileList = docObj.files;
-
+    console.log('fileList', fileList);
     if(fileList.length <3 ){
         alert("Please at least upload 3 images");
         // for IE, Opera, Safari, Chrome
         if(docObj.outerHTML){
-
+          console.log('docObj.outerHTML cunzai');
           docObj.outerHTML = docObj.outerHTML;
         }
         else{
           // FF(包括3.5)
+          console.log('docObj.outerHTML bucunzai');
           docObj.value = '';
         }
         return;
@@ -172,13 +174,13 @@
         dd.innerHTML += '<span class="img-li"><img id="img'+num+i+'" /></span>'
 
         var imgObjPreview = document.getElementById("img"+num+i);
-
+        console.log('imgObjPreview', imgObjPreview);
         if (docObj.files && docObj.files[i]) {
 
 
 
             //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
-
+            console.log('docObj.files && docObj.files[i]', docObj.files && docObj.files[i]);
             imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
 
         }
@@ -187,14 +189,15 @@
 
             //IE下，使用滤镜
 
+            console.log('docObj.files && docObj.files[i]', docObj.files && docObj.files[i]);
             docObj.select();
 
             var imgSrc = document.selection.createRange().text;
-
+            console.log('imgSrc', imgSrc);
             alert(imgSrc)
 
             var localImagId = document.getElementById("img"+num + i);
-
+            console.log('localImagId', localImagId);
             //必须设置初始大小
 
             // localImagId.style.width = "150px";
@@ -242,12 +245,12 @@
       $('.form-group-box').find('.img-upload').hide();
     }
     else{
-      
+
       $('.form-group-box').find('.img-upload').hide();
-      $('.form-group-box').find('.img-upload').eq(parseInt(index)-1).show();  
+      $('.form-group-box').find('.img-upload').eq(parseInt(index)-1).show();
 
     }
-    
+
 
   })
   $('#selectChange').trigger('change');
