@@ -17,6 +17,9 @@ AutoForm.hooks({
       insert: function(doc) {
         // console.log(this);
         // console.log("doc==>",doc);
+        doc.LeavrsImage = [1,2,3];
+        doc.FlowersImage = [1,2,3];
+        doc.RootImage = [1,2,3];
         doc.createdAt = new Date();
         return doc;
       }

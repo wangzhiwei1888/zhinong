@@ -8,7 +8,7 @@
 
     <div class="left">
       <span class="my-label">Pest type</span>
-      <select class="form-control" value="0" id="selectChange">
+      <select class="form-control" name="pesttype" value="0" id="selectChange">
         <option value="0">default</option>
         <option value="1">Weeds</option>
         <option value="2">Insects</option>
@@ -17,7 +17,7 @@
     </div>
     <div class="right">
       <span class="my-label">Pest Name</span>
-      <input type="text" class="form-control" placeholder="Eg. Paddy">
+      <input type="text" class="form-control" name="pestname" placeholder="Eg. Paddy">
     </div>
   </div>
 
@@ -146,7 +146,6 @@
 <script type="text/javascript">
 
   function setImagePreviews(clickId,id) {
-
     var num = Math.random();
     console.log('num', num);
     var docObj = document.getElementById(clickId);

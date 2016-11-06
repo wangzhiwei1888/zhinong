@@ -17,6 +17,7 @@ Router.map(function() {
       'footer': { to: 'footer' },
     }
   });
+
   this.route('about', {
     path: '/about',
     template: 'about',
@@ -61,7 +62,6 @@ Router.map(function() {
     template: 'reg',
     onBeforeAction: function() {
       if (Meteor.userId()) {
-        // this.render('index');
         Router.go("/");
       } else {
         this.next();

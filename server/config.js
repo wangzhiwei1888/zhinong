@@ -38,13 +38,3 @@ Meteor.startup(() => {
   encodeURIComponent(smtp.server) + ':' + smtp.port;
   console.log('email url = ', process.env.MAIL_URL);
 });
-
-Meteor.methods({
-  sendVerificationLink: function () {
-    let userId = Meteor.userId();
-    console.log('userId', userId);
-    if ( userId ) {
-      return Accounts.sendVerificationEmail( userId );
-    }
-  }
-});
