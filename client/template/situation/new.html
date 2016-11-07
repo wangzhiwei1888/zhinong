@@ -52,90 +52,108 @@
 <script type="text/javascript">
 
   function setImagePreviews(clickId,id) {
+    var name = $("input[name='cropName']").val();
+    if (name) {
+      var num = Math.random();
+      var docObj = document.getElementById(clickId);
 
-    var num = Math.random();
-    var docObj = document.getElementById(clickId);
+      var dd = document.getElementById(id);
 
-    var dd = document.getElementById(id);
+      var fileList = docObj.files;
 
-    var fileList = docObj.files;
+      if(fileList.length <3 ){
+          alert("Please at least upload 3 images");
+          // for IE, Opera, Safari, Chrome
+          if(docObj.outerHTML){
 
-    if(fileList.length <3 ){
-        alert("Please at least upload 3 images");
-        // for IE, Opera, Safari, Chrome
-        if(docObj.outerHTML){
+            docObj.outerHTML = docObj.outerHTML;
+          }
+          else{
+            // FF(包括3.5)
+            docObj.value = '';
+          }
+          return;
+      }
+      for (var i = 0; i < fileList.length; i++) {
 
-          docObj.outerHTML = docObj.outerHTML;
-        }
-        else{
-          // FF(包括3.5)
-          docObj.value = '';
-        }
-        return;
+          dd.innerHTML += '<span class="img-li"><img id="img'+num+i+'" /></span>'
+
+          var imgObjPreview = document.getElementById("img"+num+i);
+
+          if (docObj.files && docObj.files[i]) {
+
+
+
+              //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+
+              imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
+              var options = {};
+              options.name = $("input[name='cropName']").val();
+              options.userId = Meteor.userId();
+              options.src = window.URL.createObjectURL(docObj.files[i]);
+              console.log('options', options);
+              Meteor.call("situationnewtest", options, function(error, result){
+                if(error){
+                  console.log("error", error);
+                }
+                if(result){
+                   console.log('result', result);
+                   window.localStorage.setItem("situationId", result);
+                }
+              });
+          }
+
+          else {
+
+              //IE下，使用滤镜
+
+              docObj.select();
+
+              var imgSrc = document.selection.createRange().text;
+
+              alert(imgSrc)
+
+              var localImagId = document.getElementById("img"+num + i);
+
+              //必须设置初始大小
+
+              // localImagId.style.width = "150px";
+
+              // localImagId.style.height = "150px";
+
+              //图片异常的捕捉，防止用户修改后缀来伪造图片
+
+              try {
+
+                  localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+
+                  localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+
+              }
+
+              catch (e) {
+
+                  alert("您上传的图片格式不正确，请重新选择!");
+
+                  return false;
+
+              }
+
+              imgObjPreview.style.display = 'none';
+
+              document.selection.empty();
+
+          }
+
+      }
+
+
+
+      return true;
+
+    }else {
+      alert("Crops Name is Required");
     }
-    for (var i = 0; i < fileList.length; i++) {
-
-        dd.innerHTML += '<span class="img-li"><img id="img'+num+i+'" /></span>'
-
-        var imgObjPreview = document.getElementById("img"+num+i);
-
-        if (docObj.files && docObj.files[i]) {
-
-
-
-            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
-
-            imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
-
-        }
-
-        else {
-
-            //IE下，使用滤镜
-
-            docObj.select();
-
-            var imgSrc = document.selection.createRange().text;
-
-            alert(imgSrc)
-
-            var localImagId = document.getElementById("img"+num + i);
-
-            //必须设置初始大小
-
-            // localImagId.style.width = "150px";
-
-            // localImagId.style.height = "150px";
-
-            //图片异常的捕捉，防止用户修改后缀来伪造图片
-
-            try {
-
-                localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-
-                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
-
-            }
-
-            catch (e) {
-
-                alert("您上传的图片格式不正确，请重新选择!");
-
-                return false;
-
-            }
-
-            imgObjPreview.style.display = 'none';
-
-            document.selection.empty();
-
-        }
-
-    }
-
-
-
-    return true;
 
   }
 

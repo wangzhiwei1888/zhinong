@@ -25,7 +25,7 @@ Router.map(function() {
 
 		    })
 
-			
+
 		}
 	});
 

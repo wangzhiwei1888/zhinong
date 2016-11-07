@@ -1,0 +1,58 @@
+<template name="s3_tester">
+
+	<button class="upload">Upload</button>
+  <div class="article-bg">
+    <div class="situationNew">
+
+      <div class="tt1">Crops Situation</div>
+
+      {{#autoForm collection="situation"  id="asituationNewForm" type="insert"}}
+        <fieldset>
+          <div class="cropName">
+            <div class="left">{{> afQuickField name='cropName' placeholder="Eg. Paddy"}}</div>
+            <div class="right">Please at least upload 3 images</div>
+          </div>
+          <div class="form-group clearfix img-upload">
+            <div class="add-li">
+              <label for="exampleInputFile">leaves</label>
+              <span class="add-img"><input type="file" class="file_bag"></span>
+              <div class="img-list" id="dd">
+                {{#each files}}
+                  <!-- <p>{{percent_uploaded}}</p> -->
+                  <img src="{{url}}" alt="">
+                {{/each}}
+              </div>
+            </div>
+            <div class="add-li">
+              <label for="exampleInputFile">Flower</label>
+              <span class="add-img"><input type="file" class="file_bag"></span>
+              <div class="img-list" id="dd1">
+                {{#each files}}
+                  <!-- <p>{{percent_uploaded}}</p> -->
+                  <img src="{{url}}" alt="">
+                {{/each}}
+              </div>
+            </div>
+            <div class="add-li">
+              <label for="exampleInputFile">Root</label>
+              <span class="add-img"><input type="file" class="file_bag"></span>
+              <div class="img-list" id="dd2">
+                {{#each files}}
+                  <!-- <p>{{percent_uploaded}}</p> -->
+                  <img src="{{url}}" alt="">
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="btn-box">
+          <button type="submit" class="btn btn-default btn-login" id="cerateorgann">
+            Next Step
+          </button>
+        </div>
+      {{/autoForm}}
+    </div>
+  </div>
+
+
+</template>
