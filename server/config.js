@@ -8,6 +8,9 @@ Accounts.emailTemplates.resetPassword = {
     return "Reset your password on Meteor Todos";
   },
   text(user, url) {
+
+    var url = url.replace('#/','');
+
     return `Hello!
       Click the link below to reset your password on Meteor Todos.
       ${url}

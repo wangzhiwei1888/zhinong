@@ -15,7 +15,7 @@ Template.login.events({
    			  title: false,
    			  closeBtn: 0,
    			  shadeClose: false,
-   			  content: '<div style="width:360px; padding-bottom:60px; text-align:center; font-size:24px;"><div style="padding-top:70px;">Success!</div><div style="padding-top:30px;"><button class="btn" id="btn" style="width:300px; display:inline-block;  font-size:24px; color:#fff;">OK</button></div></div>'
+   			  content: '<div style="width:360px; padding-bottom:60px; text-align:center; font-size:24px;"><div style="padding-top:70px;padding-left:20px; padding-right:20px;">Success!</div><div style="padding-top:30px;"><button class="btn" id="btn" style="width:300px; display:inline-block;  font-size:24px; color:#fff;">OK</button></div></div>'
    			});
 
    			$('#btn').on('click',function(){
