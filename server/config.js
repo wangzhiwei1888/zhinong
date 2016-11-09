@@ -1,22 +1,22 @@
 import { Meteor } from 'meteor/meteor';
 
-Accounts.emailTemplates.siteName = "Meteor Guide Todos Example";
-Accounts.emailTemplates.from = "Meteor Todos Accounts <13412133311@139.com>";
+Accounts.emailTemplates.siteName = "Make crop protection more intelligent!";
+Accounts.emailTemplates.from = "Copyright Accounts <13412133311@139.com>";
 
 Accounts.emailTemplates.resetPassword = {
   subject(user) {
     return "Reset your password on Meteor Todos";
   },
   text(user, url) {
-
-    var url = url.replace('#/','');
+    console.log('user', user);
+    console.log('url', url);
 
     return `Hello!
       Click the link below to reset your password on Meteor Todos.
       ${url}
       If you didn't request this email, please ignore it.
       Thanks,
-      The Meteor Todos team
+      Make crop protection more intelligent team
       `
   },
   html(user, url) {

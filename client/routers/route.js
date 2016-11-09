@@ -18,15 +18,6 @@ Router.map(function() {
     }
   });
 
-  this.route('reset-password', {
-    path: '/reset-password/:id',
-    template: 'resetPassword',
-    yieldTemplates: {
-      'header': { to: 'header' },
-      'footer': { to: 'footer' },
-    }
-  });
-
   this.route('about', {
     path: '/about',
     template: 'about',
