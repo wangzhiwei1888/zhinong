@@ -1,6 +1,6 @@
 
 body{ font-family: 'Myriad Pro';  }
-.banner-bg-c{ position: fixed; top: 0; background: #fff; width: 100%; z-index: 1000;}
+.banner-bg-c{ position: fixed; top: 0; background: #fff; width: 100%; z-index: 998;}
 .banner{ width: 1000px; margin: 0 auto;}
 .banner .left{ width: 20%; padding-top: 9px; padding-bottom: 7px;}
 .banner .right{ width: 80%; height: 80px;}
