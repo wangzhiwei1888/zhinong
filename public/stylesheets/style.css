@@ -19,10 +19,10 @@ body{ font-family: 'Myriad Pro';  }
 #slides .btn-login{position: absolute; width: 264px; height: 66px; line-height: 66px; color: #fff; text-align: center; font-size: 24px; background: #3eb460; border-radius: 9px; top: 85%; left: 50%; margin-left: -132px; font-family: 'Helvetica'}
 
 
+.common{ height: 100% }
 
-
-.commonA{ width: 1000px; height: 800px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonA .font1{ width: 830px; left: 50%; margin-left: -415px; position: absolute; top: 50px; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; }
+.commonA{ width: 1000px; height: 100%; margin: 0 auto; position: relative; overflow: hidden;}
+.commonA .font1{ width: 830px; left: 50%; margin-left: -415px; position: absolute; top: 90px; text-align: center; font-size: 40px; font-weight: bold; font-family: 'Helvetica'; line-height: 50px; }
 .commonA .font2{ width: 317px; left: 50%; margin-left: -190px; position: absolute; top: 220px;}
 .commonA .font3{width: 317px; left: 50%; margin-left: -175px; position: absolute; top: 440px;}
 .commonA .phone1{position: absolute; bottom: -52px; left: 0; }
@@ -30,14 +30,14 @@ body{ font-family: 'Myriad Pro';  }
 
 
 .commonB{ width: 1000px; height: 800px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonB .font1{ width: 728px; left: 50%; margin-left: -364px; position: absolute; top: 66px; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px;}
+.commonB .font1{ width: 728px; left: 50%; margin-left: -364px; position: absolute; top: 90px; text-align: center; font-size: 40px; font-weight: bold; font-family: 'Helvetica'; line-height: 50px;}
 .commonB .font2{ width: 317px; left: 100px; position: absolute; top: 300px;}
 .commonB .font3{width: 317px; left: 100px; position: absolute; top: 500px;}
 .commonB .phone1{position: absolute; bottom: -102px; right: 0; }
 
 
 .commonC{ width: 1000px; height: 800px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonC .font1{ width: 925px; left: 50%; margin-left: -463px; position: absolute; top: 66px; z-index: 10;text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px;}
+.commonC .font1{ width: 925px; left: 50%; margin-left: -463px; position: absolute; top: 90px; z-index: 10;text-align: center; font-size: 40px; font-weight: bold; font-family: 'Helvetica'; line-height: 50px;}
 .commonC .font2{ width: 317px; left: 95px; position: absolute; top: 270px; z-index: 10;}
 .commonC .font3{width: 317px; left: 450px; position: absolute; top: 500px; z-index: 10;}
 .commonC .phone1{position: absolute; bottom: -52px; left: 0; }
@@ -45,7 +45,7 @@ body{ font-family: 'Myriad Pro';  }
 
 
 .commonD{ width: 1000px; height: 750px; margin: 0 auto; position: relative; overflow: hidden;}
-.commonD .font1{ width: 660px; left: 50%; margin-left: -330px; position: absolute; top: 76px; z-index: 10; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; color: #fff;}
+.commonD .font1{ width: 660px; left: 50%; margin-left: -330px; position: absolute; top: 110px; z-index: 10; text-align: center; font-size: 40px; font-weight: bold; font-family: 'Helvetica'; line-height: 50px; color: #fff;}
 .commonD .font2{ width: 317px; left: 5px; position: absolute; top: 190px; z-index: 10;}
 .commonD .font3{width: 948px; left: 50%; margin-left: -496px; position: absolute; top: 525px; z-index: 10; text-align: center; font-size: 44px; font-weight: bold; font-family: 'Helvetica'; line-height: 56px; color: #fff;}
 .commonD .font4{position: absolute; font-size: 20px; color: #fff; left: 350px; top: 215px; line-height: 34px; color: #eee;}
@@ -241,4 +241,4 @@ body{ font-family: 'Myriad Pro';  }
 
 
 
-
+.myanimate{ opacity: 0; }

@@ -4,80 +4,130 @@
 
 
 <template name="hello">
-
-  <div id="slides">
-    <div class="slides-container">
-      <div class="img-wapper" style="background: url('/images/banner1.png') center 0 no-repeat; display: block; ">
-        <!-- <img src="/images/banner1.png" alt="Cinelli"> -->
-        <div class="font1">
-          <div class="font2">Make crop protection more intelligent!</div>
+  <div id="fullpage">
+    <div class="section" id="section0">
+        <div id="slides" style="height: 100%;">
+          <div class="img-wapper" style="background: url('/images/banner1.png') center 0 no-repeat; display: block; height: 100%; ">
+            <!-- <img src="/images/banner1.png" alt="Cinelli"> -->
+            <div class="font1 myanimate">
+              <div class="font2 myanimate">Make crop protection more intelligent!</div>
+            </div>
+            <div class="font3 myanimate">AgriSharable delivers data and insights <br/>
+            to succeed in the agrochemicals business.</div>
+            <a class="btn-login myanimate" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
+          </div>
         </div>
-        <div class="font3">AgriSharable delivers data and insights <br/>
-        to succeed in the agrochemicals business.</div>
-        <a class="btn-login" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
+    </div>
+    <div class="section" id="section1" >
+       <div class="common">
+        <div class="commonA">
+          <div class="font1 myanimate">AIgro is a Crop protection intelligent <br/>decision engine.</div>
+          <div class="font2 myanimate"><img src="/images/font2.png" alt=""></div>
+          <div class="font3 myanimate"><img src="/images/font3.png" alt=""></div>
+          <div class="phone1 myanimate"><img src="/images/phone1.png" alt=""></div>
+          <div class="phone2 myanimate"><img src="/images/phone2.png" alt=""></div>
+        </div>
       </div>
     </div>
-  </div>
-
-
-  <div class="common">
-    <div class="commonA">
-      <div class="font1">AIgro is a Crop protection intelligent <br/>decision engine.</div>
-      <div class="font2"><img src="/images/font2.png" alt=""></div>
-      <div class="font3"><img src="/images/font3.png" alt=""></div>
-      <div class="phone1"><img src="/images/phone1.png" alt=""></div>
-      <div class="phone2"><img src="/images/phone2.png" alt=""></div>
-    </div>
-  </div>
-  <div class="common"  style="background: #f7f7f7;">
-    <div class="commonB">
-      <div class="font1">Make better registration and<br/> import decisions by using AIgro.</div>
-      <div class="font2"><img src="/images/font5.png" alt=""></div>
-      <div class="font3"><img src="/images/font6.png" alt=""></div>
-      <div class="phone1"><img src="/images/phone3.png" alt=""></div>
-    </div>
-  </div>
-  <div class="common" id="common">
-    <div class="commonC">
-      <div class="font1">Smarter solution provided in an efficient, <br/>
-          expedient and economical way.</div>
-      <div class="font2"><img src="/images/font8.png" alt=""></div>
-      <div class="font3"><img src="/images/font9.png" alt=""></div>
-      <div class="phone1"><a href="{{pathFor 'login' query='index' hash='common'}}"><img src="/images/phone4.png" alt=""></a></div>
-    </div>
-  </div>
-  <div class="common commonD-bg" id="commonbg">
-    <div class="commonD">
-      <div class="font1">The future of crop protection</div>
-      <div class="font2"><img src="/images/font11.png" alt=""></div>
-      <div class="font3">Let's create the intelligent crop protection<br/> from here together!</div>
-      <div class="font4">We always hope the agrochemicals can protect our crops better, <br/>
-        however, we usually disappointed. <br/>
-        The new and more efficiency agrochemicals less and less, <br/>
-        is that the fault of MNCs? Or is that the fault of importers?<br/>
-        No! The root of problems is we never use right tools to record and<br/>
-        analysis how to use the agrochemicals with correct method.
+    <div class="section" id="section2">
+       <div class="common"  style="background: #f7f7f7;">
+        <div class="commonB">
+          <div class="font1 myanimate">Make better registration and<br/> import decisions by using AIgro.</div>
+          <div class="font2 myanimate"><img src="/images/font5.png" alt=""></div>
+          <div class="font3 myanimate"><img src="/images/font6.png" alt=""></div>
+          <div class="phone1 myanimate"><img src="/images/phone3.png" alt=""></div>
+        </div>
       </div>
-      <a class="btn-login" href="{{pathFor 'login' query='index' hash='commonbg'}}" >Create Together!</a>
+    </div>
+
+   
+
+    <div class="section" id="section4" >
+       <div class="common" id="common">
+        <div class="commonC">
+          <div class="font1 myanimate">Smarter solution provided in an efficient, <br/>
+              expedient and economical way.</div>
+          <div class="font2 myanimate"><img src="/images/font8.png" alt=""></div>
+          <div class="font3 myanimate"><img src="/images/font9.png" alt=""></div>
+          <div class="phone1 myanimate"><a href="{{pathFor 'login' query='index' hash='common'}}"><img src="/images/phone4.png" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section5">
+       <div class="common commonD-bg" id="commonbg">
+        <div class="commonD">
+          <div class="font1 myanimate">The future of crop protection</div>
+          <div class="font2 myanimate"><img src="/images/font11.png" alt=""></div>
+          <div class="font3 myanimate">Let's create the intelligent crop protection<br/> from here together!</div>
+          <div class="font4 myanimate">We always hope the agrochemicals can protect our crops better, <br/>
+            however, we usually disappointed. <br/>
+            The new and more efficiency agrochemicals less and less, <br/>
+            is that the fault of MNCs? Or is that the fault of importers?<br/>
+            No! The root of problems is we never use right tools to record and<br/>
+            analysis how to use the agrochemicals with correct method.
+          </div>
+          <a class="btn-login myanimate" href="{{pathFor 'login' query='index' hash='commonbg'}}" >Create Together!</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section fp-auto-height" id="section6">
+        <div class="footer-bg">
+        <div class="footer">
+          <div class="title">Contact Us</div>
+          <div class="contact-list">
+            <div class="list"><span class="icon"><img src="/images/icon01.png" alt=""></span><span>Email: demo@agrisharable.com</span></div>
+            <div class="list"><span class="icon"><img src="/images/icon02.png" alt=""></span><span>Phone No.: +8618611194671</span></div>
+            <div class="list"><span class="icon"><img src="/images/icon03.png" alt=""></span><span>Facebook: agrisharable</span></div>
+          </div>
+          <div class="di">
+            <span>Copyright © 2016 Agrisharable Ltd. All rights reserved. </span><span class="line"></span><a href="{{pathFor 'privacy'}}" target="_blank" class="toTop">Privacy Policy </a><span class="line"></span><a href="{{pathFor 'article'}}"  target="_blank" class="toTop"> Terms of Use</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
 
   <script type="text/javascript">
 
-    $(function(){
+      $(document).ready(function() {
 
-      // alert($(window).height());
-      $(window).resize(function() {
-        var windowHeight = ($(window).height()-80) + 'px';
-        $('.img-wapper').css('height',windowHeight);
-        $('.slides-container').css('height',windowHeight);
+            $('#fullpage').fullpage({
+                  verticalCentered: true,
+                  anchors: ['anchor1', 'anchor2', 'anchor3','anchor4','anchor5','anchor6','anchor7'],
+                  afterLoad: function(anchorLink, index){
+                                        
+                      console.log(index-1);
+                     $('.section').eq(index-1).find('.myanimate').addClass('fadeInUp animated');  
+                    
+                  },
+
+                  onLeave: function(index, nextIndex, direction){
+
+                    setTimeout(function(){
+
+                      if(window.location.href.indexOf('anchor6') != -1){
+
+                        return;
+                      }
+                      else{
+                        $('.section').eq(index-1).find('.myanimate').removeClass('fadeInUp animated');  
+                      }
+                      
+                    },1000)
+                    
+                  },
+
+              });
+
+
+            // console.log(window.location.href);
+
+            
+          
       });
-
-      $(window).trigger('resize');
-
-    })
-    
   </script>
 
 </template>
