@@ -7,7 +7,6 @@
 
   <div id="slides">
     <div class="slides-container">
-
       <div class="img-wapper" style="background: url('/images/banner1.png') center 0 no-repeat; display: block; ">
         <!-- <img src="/images/banner1.png" alt="Cinelli"> -->
         <div class="font1">
@@ -17,39 +16,7 @@
         to succeed in the agrochemicals business.</div>
         <a class="btn-login" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
       </div>
-      <div class="img-wapper" style="background: url('/images/bg.png') center 0 no-repeat;  ">
-        <!-- <img src="/images/banner1.png" alt="Cinelli"> -->
-        <div class="font1">
-          <div class="font2">Make crop protection more intelligent!</div>
-        </div>
-        <div class="font3">AgriSharable delivers data and insights <br/>
-        to succeed in the agrochemicals business.</div>
-        <a class="btn-login" href="" >Sign Up, It's Free!</a>
-      </div>
-      <div class="img-wapper" style="background: url('/images/banner1.png') center 0 no-repeat;  ">
-        <!-- <img src="/images/banner1.png" alt="Cinelli"> -->
-        <div class="font1">
-          <div class="font2">Make crop protection more intelligent!</div>
-        </div>
-        <div class="font3">AgriSharable delivers data and insights <br/>
-        to succeed in the agrochemicals business.</div>
-        <a class="btn-login" href="" >Sign Up, It's Free!</a>
-      </div>
-      <div class="img-wapper" style="background: url('/images/bg.png') center 0 no-repeat;  ">
-        <!-- <img src="/images/banner1.png" alt="Cinelli"> -->
-        <div class="font1">
-          <div class="font2">Make crop protection more intelligent!</div>
-        </div>
-        <div class="font3">AgriSharable delivers data and insights <br/>
-        to succeed in the agrochemicals business.</div>
-        <a class="btn-login" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
-      </div>
     </div>
-    <nav class="slides-navigation">
-      <a href="#" class="back"><img src="/images/back.png" alt=""></a>
-      <a href="#" class="center"><img src="/images/cursor.png" alt=""></a>
-      <a href="#" class="next"><img src="/images/next.png" alt=""></a>
-    </nav>
   </div>
 
 
@@ -100,96 +67,17 @@
 
     $(function(){
 
-    	var index = 0;
-    	var num = $('.img-wapper').length;
-    	var btnstr = '';
+      // alert($(window).height());
+      $(window).resize(function() {
+        var windowHeight = ($(window).height()-80) + 'px';
+        $('.img-wapper').css('height',windowHeight);
+        $('.slides-container').css('height',windowHeight);
+      });
 
-
-    	for(var i=1;i<=num;i++){
-
-    		btnstr += '<a href="#'+i+'">'+i+'</a>';
-    	}
-
-    	var tabBtnStr = '<nav class="slides-pagination">'+btnstr+'</nav>';
-
-    	$('#slides').append(tabBtnStr);
-    	$('#slides').find('.slides-pagination a').eq(0).addClass('current');
-
-    	var timer = null;
-
-    	function autoRun(){
-
-    		index = index+1;
-    		if(index>=num){
-
-    			index = 0;
-    		}
-    		$('.img-wapper').fadeOut(1000);
-    		$('.img-wapper').eq(index).fadeIn(1000);
-
-    		$('#slides').find('.slides-pagination a').removeClass('current');
-    		$('#slides').find('.slides-pagination a').eq(index).addClass('current');
-
-    	}
-
-    	timer = setInterval(function(){
-
-	    	autoRun();
-
-	    },5000)
-
-
-    	$('#slides').on('mouseover',function(){
-
-    		clearInterval(timer);
-    	})
-
-    	$('#slides').on('mouseout',function(){
-
-    		timer = setInterval(function(){
-
-		    	autoRun();
-
-		    },5000)
-    	})
-
-    	$('#slides').find('.slides-pagination a').on('click',function(){
-
-    		index = $(this).index();
-    		$('#slides').find('.slides-pagination a').removeClass('current');
-    		$('#slides').find('.slides-pagination a').eq(index).addClass('current');
-
-    		$('.img-wapper').fadeOut(1000);
-    		$('.img-wapper').eq(index).fadeIn(1000);
-
-    	})
-
-    	$('#slides').find('.back').on('click',function(){
-
-    		index = index-1;
-    		if(index<0){
-
-    			index = num-1;
-    		}
-    		$('#slides').find('.slides-pagination a').removeClass('current');
-    		$('#slides').find('.slides-pagination a').eq(index).addClass('current');
-
-    		$('.img-wapper').fadeOut(1000);
-    		$('.img-wapper').eq(index).fadeIn(1000);
-
-    	})
-
-    	$('#slides').find('.next').on('click',function(){
-
-    		autoRun();
-
-    	})
-
-
-
-
+      $(window).trigger('resize');
 
     })
+    
   </script>
 
 </template>

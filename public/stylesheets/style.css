@@ -10,13 +10,9 @@ body{ font-family: 'Myriad Pro';  }
 .banner .list .active{ color: #63c415;  }
 
 
-#slides .slides-container{ display: block; position: relative; height: 720px;}
-#slides .img-wapper{ position: absolute; left: 0px; top: 0px; width: 100%; height: 720px; background: red; display: none;}
-#slides .slides-pagination{ right: 20px; width: 15px; height: 80px; top: 47%; margin-top: -40px; }
-#slides .slides-navigation a{ position: static; text-align: center;}
-#slides .slides-navigation{ width: 20px; margin: auto; right: 17px; margin-top: 70px; top: 22%;}
-#slides .slides-pagination a{ border:1px solid #62dd01; width: 8px; height: 8px; border-radius: 8px; margin: 10px 0;}
-#slides .slides-pagination a.current{ background: none; width: 12px; height: 12px; border-radius: 12px; }
+#slides .slides-container{ display: block; position: relative;}
+#slides .img-wapper{ position: absolute; left: 0px; top: 0px; width: 100%; background: red; display: none;}
+
 #slides .font1{font-size: 36px; color: #fff; position: absolute; top: 37%; left: 50%; margin-left: -350px; width: 700px; text-align: center; border: 2px solid #fff;}
 #slides .font2{background: rgba(255,255,255,0.3); margin: 5px;}
 #slides .font3{position: absolute; width: 600px; top: 72%; left: 50%; margin-left: -300px; color: #fff; font-size: 26px; text-align: center; letter-spacing: 2px;font-family: 'Helvetica'}
@@ -71,8 +67,8 @@ body{ font-family: 'Myriad Pro';  }
 .aboutA-bg{background: url(/images/bg1.png) center 0 no-repeat; }
 
 .aboutA{ width: 1000px; margin: 0 auto; }
-.aboutA .tt{ padding-top: 35px; padding-bottom: 30px; text-align: center; font-size: 48px; font-weight: bold; }
-.aboutA .con{ height: 625px; }
+.aboutA .tt{ padding-top: 35px; padding-bottom: 30px; text-align: center; font-size: 48px; font-weight: bold; height: 130px;}
+.aboutA .con{ overflow: hidden;}
 .aboutA .con li{ float: left; width: 248px; height: 625px; text-align: center; border-right: 1px solid #c9c9c9;}
 .aboutA .con li:last-child{ border-right: 0; }
 .aboutA .con .img{ margin-top: 5px; }
