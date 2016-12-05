@@ -15,8 +15,8 @@ AutoForm.hooks({
   'solutionNewForm': {
     before: {
       insert: function(doc) {
-        // console.log(this);
-        // console.log("doc==>",doc);
+        console.log(this);
+        console.log("doc==>",doc);
         doc.pestId = window.localStorage.getItem("pestId");
         doc.createdAt = new Date();
         return doc;
@@ -29,6 +29,7 @@ AutoForm.hooks({
        Router.go('/summarynew',{_id:result});
     },
     onError: function(operation, error, template) {
+      console.log('error', error);
       alert(error);
     }
   }

@@ -14,7 +14,11 @@
             </div>
             <div class="font3 myanimate">AgriSharable delivers data and insights <br/>
             to succeed in the agrochemicals business.</div>
-            <a class="btn-login myanimate" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
+            {{#if currentUser}}
+              <a class="btn-login myanimate" href="#" >Sign Up, It's Free!</a>
+            {{else}}
+              <a class="btn-login myanimate" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
+            {{/if}}
           </div>
         </div>
     </div>
@@ -40,7 +44,7 @@
       </div>
     </div>
 
-   
+
 
     <div class="section" id="section4" >
        <div class="common" id="common">
@@ -49,7 +53,14 @@
               expedient and economical way.</div>
           <div class="font2 myanimate"><img src="/images/font8.png" alt=""></div>
           <div class="font3 myanimate"><img src="/images/font9.png" alt=""></div>
-          <div class="phone1 myanimate"><a href="{{pathFor 'login' query='index' hash='common'}}"><img src="/images/phone4.png" alt=""></a></div>
+          <div class="phone1 myanimate">
+            {{#if currentUser}}
+              <a href="#"><img src="/images/phone4.png" alt=""></a>
+            {{else}}
+              <!-- <a href="{{pathFor 'login' query='index' hash='anchor4'}}"><img src="/images/phone4.png" alt=""></a> -->
+              <a href="{{pathFor 'login' hash='anchor4'}}"><img src="/images/phone4.png" alt=""></a>
+            {{/if}}
+          </div>
         </div>
       </div>
     </div>
@@ -67,11 +78,15 @@
             No! The root of problems is we never use right tools to record and<br/>
             analysis how to use the agrochemicals with correct method.
           </div>
-          <a class="btn-login myanimate" href="{{pathFor 'login' query='index' hash='commonbg'}}" >Create Together!</a>
+          {{#if currentUser}}
+              <a class="btn-login myanimate" href="#" >Create Together!</a>
+          {{else}}
+            <a class="btn-login myanimate" href="{{pathFor 'login' hash='anchor5'}}" >Create Together!</a>
+          {{/if}}
         </div>
       </div>
     </div>
-    
+
     <div class="section fp-auto-height" id="section6">
         <div class="footer-bg">
         <div class="footer">
@@ -98,10 +113,10 @@
                   verticalCentered: true,
                   anchors: ['anchor1', 'anchor2', 'anchor3','anchor4','anchor5','anchor6','anchor7'],
                   afterLoad: function(anchorLink, index){
-                                        
+
                       console.log(index-1);
-                     $('.section').eq(index-1).find('.myanimate').addClass('fadeInUp animated');  
-                    
+                     $('.section').eq(index-1).find('.myanimate').addClass('fadeInUp animated');
+
                   },
 
                   onLeave: function(index, nextIndex, direction){
@@ -113,11 +128,11 @@
                         return;
                       }
                       else{
-                        $('.section').eq(index-1).find('.myanimate').removeClass('fadeInUp animated');  
+                        $('.section').eq(index-1).find('.myanimate').removeClass('fadeInUp animated');
                       }
-                      
+
                     },1000)
-                    
+
                   },
 
               });
@@ -125,8 +140,8 @@
 
             // console.log(window.location.href);
 
-            
-          
+
+
       });
   </script>
 

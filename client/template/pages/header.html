@@ -7,13 +7,20 @@
       </div>
       <div class="right">
         <ul class="list clear">
-          <li class="li"><a href="{{pathFor 'index'}}" target="_blank" class="active Algro" >Algro</a></li>
+          <li class="li"><a href="" class="pub" id="Algro">Algro</a></li>
+          <li class="li"><a href="" class="pub" id="Demo">Demo</a></li>
+          <li class="li"><a href="" class="pub" id="about">About</a></li>
+          <li class="li"><a href="" class="pub" id="Date">Date</a></li>
+          <li class="li"><a href="" class="pub" id="Sign">Sign</a></li>
+          <li class="li" >{{#unless currentUser}}<a href="" class="pub" id="Login">Login</a>{{else}}
+            <a class="logOut pub" href="" >LogOut</a>{{/unless}}</li>
+          <!-- <li class="li"><a href="{{pathFor 'index'}}" target="_blank" class="active Algro" >Algro</a></li>
           <li class="li"><a href="{{pathFor 'reg'}}" target="_blank" class="pub">Demo</a></li>
-          <li class="li"><a href="{{pathFor 'about'}}" target="_blank" class="pub">About</a></li>
+          <li class="li" id="about"><a href="" class="pub">About</a></li>
           <li class="li"><a href="{{pathFor 'situationnew'}}" target="_blank" class="pub">Date</a></li>
           <li class="li"><a href="{{pathFor 'reg'}}" target="_blank" class="pub">Sign up</a></li>
           <li class="li">{{#unless currentUser}}<a href="{{pathFor 'login'}}" target="_blank" class="pub">Login</a>{{else}}
-            <a class="logOut pub" href="" >LogOut</a>{{/unless}}</li>
+            <a class="logOut pub" href="" >LogOut</a>{{/unless}}</li> -->
         </ul>
       </div>
     </div>

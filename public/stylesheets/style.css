@@ -6,7 +6,8 @@ body{ font-family: 'Myriad Pro';  }
 .banner .right{ width: 80%; height: 80px;}
 .banner .list{ text-align: right; font-weight: bold; font-size: 16px;}
 .banner .list .li{ display: inline-block; width: 100px; line-height: 80px; text-align: center; }
-.banner .list a{ color: #3eb460; font-family:Georgia,Serif; }
+/*.banner .list a{ color: #3eb460; font-family:Georgia,Serif; }*/
+.banner .list a{ color: #3eb460;  }
 .banner .list .active{ color: #63c415;  }
 
 
