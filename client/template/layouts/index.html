@@ -15,7 +15,7 @@
             <div class="font3 myanimate">AgriSharable delivers data and insights <br/>
             to succeed in the agrochemicals business.</div>
             {{#if currentUser}}
-              <a class="btn-login myanimate" href="#" >Sign Up, It's Free!</a>
+              <a class="btn-login myanimate currentuser" href="#" >Sign Up, It's Free!</a>
             {{else}}
               <a class="btn-login myanimate" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
             {{/if}}
@@ -55,7 +55,7 @@
           <div class="font3 myanimate"><img src="/images/font9.png" alt=""></div>
           <div class="phone1 myanimate">
             {{#if currentUser}}
-              <a href="#"><img src="/images/phone4.png" alt=""></a>
+              <a href="#" class="currentuser"><img src="/images/phone4.png" alt=""></a>
             {{else}}
               <!-- <a href="{{pathFor 'login' query='index' hash='anchor4'}}"><img src="/images/phone4.png" alt=""></a> -->
               <a href="{{pathFor 'login' hash='anchor4'}}"><img src="/images/phone4.png" alt=""></a>
@@ -79,7 +79,7 @@
             analysis how to use the agrochemicals with correct method.
           </div>
           {{#if currentUser}}
-              <a class="btn-login myanimate" href="#" >Create Together!</a>
+              <a class="btn-login myanimate currentuser" href="#" >Create Together!</a>
           {{else}}
             <a class="btn-login myanimate" href="{{pathFor 'login' hash='anchor5'}}" >Create Together!</a>
           {{/if}}

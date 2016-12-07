@@ -20,6 +20,9 @@ Template.header.events({
   "click #Algro": function(event, template){
     window.location.href='/#anchor2';
   },
+  "click .logo": function(event, template){
+    window.location.href='/';
+  },
   "click #Date": function(event, template){
     window.location.href='/date';
   },
