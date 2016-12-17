@@ -5,7 +5,8 @@ Template.header.events({
   },
   "click .Algro": function(event, template){
     
-    $('document,body').animate({scrollTop: '719px'}, 800);
+    var windowHeight = ($(window).height()-80) + 'px';
+    $('document,body').animate({scrollTop: windowHeight}, 800);
   },
   "click .list .pub": function(event, template){
     
