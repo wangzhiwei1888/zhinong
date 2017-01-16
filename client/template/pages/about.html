@@ -105,7 +105,7 @@
 						<img src="/images/img11.png" alt="">
 					</div>
 				</div>
-				<div class="fc" id="abouthash1">
+				<div class="fc" id="anchor44">
 					<div class="img-box">
 						<div class="img-box-c">
 							<div class="img-box-cc">
@@ -114,8 +114,12 @@
 								Welcome to participate in the GAAIA (Global <br/>Agriculture Artificial Intelligence Alliance) . <br/>
 								Let's empower the Agriculture with AI. <br/>
 							</div>
-							<div class="btn-box">
-								<a href="{{pathFor route='login' query='about' hash='abouthash1'}}"><img src="/images/btn.png" alt=""></a>
+							<div class="btn-box ">
+								{{#if currentUser}}
+			            <a href="#" class="currentuser"><img src="/images/btn.png" alt=""></a>
+			          {{else}}
+			            <a href="{{pathFor route='login' hash='anchor44'}}"><img src="/images/btn.png" alt=""></a>
+			          {{/if}}
 							</div>
 						</div>
 
@@ -127,8 +131,8 @@
 	</div>
 
 	<script type="text/javascript">
-		
-		
+
+
 
 		$(function(){
 

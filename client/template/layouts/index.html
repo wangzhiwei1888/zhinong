@@ -14,7 +14,11 @@
         </div>
         <div class="font3">AgriSharable delivers data and insights <br/>
         to succeed in the agrochemicals business.</div> -->
-        <a class="btn-login" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
+        {{#if currentUser}}
+          <a class="btn-login myanimate currentuser" href="#" >Sign Up, It's Free!</a>
+        {{else}}
+          <a class="btn-login myanimate" href="{{pathFor 'reg'}}" >Sign Up, It's Free!</a>
+        {{/if}}
       </div>
     </div>
   </div>
@@ -37,16 +41,23 @@
       <div class="phone1"><img src="/images/phone3.png" alt=""></div>
     </div>
   </div>
-  <div class="common" id="common">
+  <div class="common" id="anchor4">
     <div class="commonC">
       <div class="font1">Smarter solution provided in an efficient, <br/>
           expedient and economical way.</div>
       <div class="font2"><img src="/images/font8.png" alt=""></div>
       <div class="font3"><img src="/images/font9.png" alt=""></div>
-      <div class="phone1"><a href="{{pathFor 'login' query='index' hash='common'}}"><img src="/images/phone4.png" alt=""></a></div>
+      <div class="phone1 myanimate">
+        {{#if currentUser}}
+          <a href="#" class="currentuser"><img src="/images/phone4.png" alt=""></a>
+        {{else}}
+          <!-- <a href="{{pathFor 'login' query='index' hash='anchor4'}}"><img src="/images/phone4.png" alt=""></a> -->
+          <a href="{{pathFor 'login' hash='anchor4'}}"><img src="/images/phone4.png" alt=""></a>
+        {{/if}}
+      </div>
     </div>
   </div>
-  <div class="common commonD-bg" id="commonbg">
+  <div class="common commonD-bg" id="anchor5">
     <div class="commonD">
       <div class="font1">The future of crop protection</div>
       <div class="font2"><img src="/images/font11.png" alt=""></div>
@@ -58,7 +69,11 @@
         No! The root of problems is we never use right tools to record and<br/>
         analysis how to use the agrochemicals with correct method.
       </div>
-      <a class="btn-login" href="{{pathFor 'login' query='index' hash='commonbg'}}" >Create Together!</a>
+      {{#if currentUser}}
+          <a class="btn-login myanimate currentuser" href="#" >Create Together!</a>
+      {{else}}
+        <a class="btn-login myanimate" href="{{pathFor 'login' hash='anchor5'}}" >Create Together!</a>
+      {{/if}}
     </div>
   </div>
 
@@ -77,7 +92,7 @@
       $(window).trigger('resize');
 
     })
-    
+
   </script>
 
 </template>
