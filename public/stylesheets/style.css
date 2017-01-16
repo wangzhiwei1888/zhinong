@@ -69,15 +69,15 @@ body{ font-family: 'Myriad Pro';  }
 .aboutA{ width: 1000px; margin: 0 auto; }
 .aboutA .tt{ padding-top: 35px; padding-bottom: 30px; text-align: center; font-size: 48px; font-weight: bold; height: 130px;}
 .aboutA .con{ overflow: hidden;}
-.aboutA .con li{ float: left; width: 248px; height: 625px; text-align: center; border-right: 1px solid #c9c9c9;}
+.aboutA .con li{ float: left; width: 248px; height: 490px; text-align: center; border-right: 1px solid #c9c9c9;}
 .aboutA .con li:last-child{ border-right: 0; }
 .aboutA .con .img{ margin-top: 5px; }
-.aboutA .con .table{ margin-top: 30px; }
-.aboutA .con .map{ margin-top: 30px; }
-.aboutA .con .font{ font-size: 18px; margin-top: 50px; padding-top: 20px; height: 100px; }
+.aboutA .con .table{ margin-top: 20px; }
+.aboutA .con .map{ margin-top: 10px; }
+.aboutA .con .font{ font-size: 18px; margin-top: 10px; padding-top: 20px; height: 90px; }
 
 
-.aboutB-bg{background: #f7f7f7; margin-top: 30px; }
+.aboutB-bg{background: #f7f7f7; margin-top: 0px; }
 .aboutB{ width: 1000px; height: 775px; margin: 0 auto; font-size: 18px;}
 .aboutB .tt{ padding-top: 55px; padding-bottom: 30px; text-align: center; font-size: 48px; font-weight: bold; }
 .aboutB .sub-tt{ font-size: 32px; text-align: center; }
